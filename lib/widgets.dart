@@ -172,3 +172,27 @@ class ContainerOfTitleScrollController extends StatelessWidget {
     );
   }
 }
+
+class MyHowerWidget extends StatelessWidget {
+  const MyHowerWidget({super.key, required this.widget});
+
+  final Widget widget;
+
+  @override
+  Widget build(BuildContext context) {
+    return HoverWidget(
+      child: widget,
+      hoverChild: hoverChild,
+      onHover: onHover,
+    );
+  }
+}
+
+class SideNavBar extends StatelessWidget {
+  const SideNavBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
