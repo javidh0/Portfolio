@@ -127,12 +127,40 @@ class TitleScrollController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return HoverWidget(
+      hoverChild: const ContainerOfTitleScrollController(
+        highlightColor: kColorSecondary,
+      ),
+      onHover: (event) {},
+      child: const ContainerOfTitleScrollController(
+        highlightColor: kColorTert,
+      ),
+    );
+  }
+}
+
+class ContainerOfTitleScrollController extends StatelessWidget {
+  const ContainerOfTitleScrollController(
+      {super.key, required this.highlightColor});
+
+  final Color highlightColor;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: 20,
-      width: 100,
+      width: 85,
       decoration: BoxDecoration(
-        color: kFontColorSecondary,
+        border: Border.all(width: 1, color: highlightColor),
+        color: kTransperent,
         borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Icon(home, size: 14, color: highlightColor),
+          Text("MYSELF", style: kStyleVSmall.copyWith(color: highlightColor)),
+        ],
       ),
     );
   }
