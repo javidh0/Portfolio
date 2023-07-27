@@ -121,3 +121,19 @@ class PlaceHolderImage extends StatelessWidget {
     );
   }
 }
+
+class TitleScrollController extends StatelessWidget {
+  const TitleScrollController({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 20,
+      width: 100,
+      decoration: BoxDecoration(
+        color: kFontColorSecondary,
+        borderRadius: BorderRadius.circular(20),
+      ),
+    );
+  }
+}
