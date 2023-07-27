@@ -123,27 +123,34 @@ class PlaceHolderImage extends StatelessWidget {
 }
 
 class TitleScrollController extends StatelessWidget {
-  const TitleScrollController({super.key});
+  const TitleScrollController(
+      {super.key, required this.icon, required this.title});
+
+  final IconData icon;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return HoverWidget(
-      hoverChild: const ContainerOfTitleScrollController(
-        highlightColor: kColorSecondary,
-      ),
+      hoverChild: ContainerOfTitleScrollController(
+          highlightColor: kColorSecondary, icon: icon, title: title),
       onHover: (event) {},
-      child: const ContainerOfTitleScrollController(
-        highlightColor: kColorTert,
-      ),
+      child: ContainerOfTitleScrollController(
+          highlightColor: kColorTert, icon: icon, title: title),
     );
   }
 }
 
 class ContainerOfTitleScrollController extends StatelessWidget {
   const ContainerOfTitleScrollController(
-      {super.key, required this.highlightColor});
+      {super.key,
+      required this.highlightColor,
+      required this.icon,
+      required this.title});
 
   final Color highlightColor;
+  final IconData icon;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
