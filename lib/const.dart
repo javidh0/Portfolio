@@ -9,6 +9,7 @@ const Color kFontColorSecondary = Color(0xFF4ED385);
 const Color kColorPrimary = Color(0xFFFFFFFF);
 const Color kColorSecondary = Color(0xFF4ED385);
 const Color kColorTert = Color(0xFF949395);
+const Color kTransperent = Colors.transparent;
 
 final TextStyle kStyleBig = kFont.copyWith(
     color: kColorPrimary, fontSize: 25, fontWeight: FontWeight.bold);
@@ -17,8 +18,11 @@ final TextStyle kStyleSmall =
 final TextStyle kStyleMedium = kFont.copyWith(
     color: kColorPrimary, fontSize: 20, fontWeight: FontWeight.w100);
 
+final TextStyle kStyleVSmall = kStyleSmall.copyWith(fontSize: 10);
+
 const IconData linkedIn = FontAwesomeIcons.linkedin;
 const IconData gitHub = FontAwesomeIcons.github;
 const IconData leetCode = FontAwesomeIcons.code;
 const IconData instagram = FontAwesomeIcons.instagram;
 const IconData gmail = Icons.mail_outline_outlined;
+const IconData home = Icons.home_outlined;
