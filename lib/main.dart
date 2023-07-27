@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets.dart';
 import 'const.dart';
 import 'cards.dart';
 
@@ -69,18 +70,27 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      body: Container(
-        color: kBackgroundColor,
-        child: const Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: Row(
-            children: [
-              PersonalInfoCard(),
-              SizedBox(width: 100),
-            ],
+      backgroundColor: kBackgroundColor,
+      body: Row(
+        children: [
+          Container(
+            color: kBackgroundColor,
+            child: const Center(
+              // Center is a layout widget. It takes a single child and positions it
+              // in the middle of the parent.
+              child: Row(
+                children: [
+                  PersonalInfoCard(),
+                  SizedBox(width: 100),
+                ],
+              ),
+            ),
           ),
-        ),
+          const Padding(
+            padding: EdgeInsets.all(20),
+            child: TitleScrollController(),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
