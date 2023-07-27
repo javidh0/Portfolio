@@ -88,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           const Padding(
             padding: EdgeInsets.all(20),
-            child: TitleScrollController(),
+            child: TitleScrollController(icon: home, title: "MYSELF"),
           ),
         ],
       ),
