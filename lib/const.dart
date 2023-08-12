@@ -28,3 +28,8 @@ const IconData leetCode = FontAwesomeIcons.code;
 const IconData instagram = FontAwesomeIcons.instagram;
 const IconData gmail = Icons.mail_outline_outlined;
 const IconData home = Icons.home_outlined;
+
+const String kWelcomeText =
+    "I am an ardent B.Tech student, with a fervent passion for the dynamic convergence of AI, Software Development, and Data Analytics.\nMy journey is a testament to my unceasing curiosity and unwavering dedication to technological innovation.";
+const String kWelcomeText1 =
+    "Stepping into a realm where bytes shape my dreams, code paints my journey, and innovation becomes second nature. Welcome to the tapestry of my tech odyssey.";

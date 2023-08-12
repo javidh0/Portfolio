@@ -65,12 +65,20 @@ class TheContent extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
           child: SizedBox(
-            width: 700,
+            width: 800,
             child: RichText(
               text: TextSpan(
-                text: 'Hi from Javidh, Welcome to My ',
+                text: 'Hi from ',
                 style: kStyleVeryBig,
                 children: [
+                  TextSpan(
+                    text: 'Javidh,',
+                    style: kStyleVeryBig.copyWith(color: kColorSecondary),
+                  ),
+                  TextSpan(
+                    text: ' \nWelcome to My ',
+                    style: kStyleVeryBig,
+                  ),
                   TextSpan(
                     text: 'Tech Odyssey!',
                     style: kStyleVeryBig.copyWith(color: kColorSecondary),
@@ -81,11 +89,11 @@ class TheContent extends StatelessWidget {
           ),
         ),
         SizedBox(
-          width: 900,
+          width: 580,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
             child: Text(
-              "I am an ardent B.Tech student, with a fervent passion for the dynamic convergence of AI, Software Development, and Data Analytics.\nMy journey is a testament to my unceasing curiosity and unwavering dedication to technological innovation.",
+              kWelcomeText1,
               style: kStyleSmall.copyWith(color: kColorTert),
             ),
           ),
