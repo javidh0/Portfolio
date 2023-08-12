@@ -173,7 +173,6 @@ class ContainerOfTitleScrollController extends StatelessWidget {
   }
 }
 
-
 class SideNavBar extends StatelessWidget {
   const SideNavBar({super.key});
 
