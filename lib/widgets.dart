@@ -124,19 +124,31 @@ class PlaceHolderImage extends StatelessWidget {
 
 class TitleScrollController extends StatelessWidget {
   const TitleScrollController(
-      {super.key, required this.icon, required this.title});
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.width});
 
   final IconData icon;
   final String title;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return HoverWidget(
       hoverChild: ContainerOfTitleScrollController(
-          highlightColor: kColorSecondary, icon: icon, title: title),
+        highlightColor: kColorSecondary,
+        icon: icon,
+        title: title,
+        width: width,
+      ),
       onHover: (event) {},
       child: ContainerOfTitleScrollController(
-          highlightColor: kColorTert, icon: icon, title: title),
+        highlightColor: kColorTert,
+        icon: icon,
+        title: title,
+        width: width,
+      ),
     );
   }
 }
@@ -146,17 +158,19 @@ class ContainerOfTitleScrollController extends StatelessWidget {
       {super.key,
       required this.highlightColor,
       required this.icon,
-      required this.title});
+      required this.title,
+      required this.width});
 
   final Color highlightColor;
   final IconData icon;
   final String title;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20,
-      width: 85,
+      height: 25,
+      width: width,
       decoration: BoxDecoration(
         border: Border.all(width: 1, color: highlightColor),
         color: kTransperent,
@@ -166,7 +180,7 @@ class ContainerOfTitleScrollController extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Icon(home, size: 14, color: highlightColor),
-          Text("MYSELF", style: kStyleVSmall.copyWith(color: highlightColor)),
+          Text(title, style: kStyleVSmall.copyWith(color: highlightColor)),
         ],
       ),
     );

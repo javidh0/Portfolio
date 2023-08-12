@@ -11,6 +11,8 @@ const Color kColorSecondary = Color(0xFF4ED385);
 const Color kColorTert = Color(0xFF949395);
 const Color kTransperent = Colors.transparent;
 
+final TextStyle kStyleVeryBig = kFont.copyWith(
+    color: kColorPrimary, fontSize: 50, fontWeight: FontWeight.bold);
 final TextStyle kStyleBig = kFont.copyWith(
     color: kColorPrimary, fontSize: 25, fontWeight: FontWeight.bold);
 final TextStyle kStyleSmall =
