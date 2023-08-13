@@ -27,6 +27,8 @@ class TheViewport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         PersonalInfoCard(),
         Padding(
@@ -48,57 +50,106 @@ class MyPlaceholder extends StatelessWidget {
   }
 }
 
+class Test extends StatelessWidget {
+  const Test({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Container(
+          color: Colors.amber,
+          width: 100,
+          height: 100,
+        ),
+      ],
+    );
+  }
+}
+
 class TheContent extends StatelessWidget {
   const TheContent({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const TitleScrollController(
-          icon: home,
-          title: "WELCOME",
-          width: 100,
-        ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
-          child: SizedBox(
-            width: 800,
+    return SizedBox(
+      width: 800,
+      child: ListView(
+        // mainAxisAlignment: MainAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const TitleScrollController(
+            icon: home,
+            title: "WELCOME",
+            width: 100,
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
+            child: SizedBox(
+              width: 800,
+              child: RichText(
+                text: TextSpan(
+                  text: 'Hi from ',
+                  style: kStyleVeryBig,
+                  children: [
+                    TextSpan(
+                      text: 'Javidh,',
+                      style: kStyleVeryBig.copyWith(color: kColorSecondary),
+                    ),
+                    TextSpan(
+                      text: ' \nWelcome to My ',
+                      style: kStyleVeryBig,
+                    ),
+                    TextSpan(
+                      text: 'Tech Odyssey!',
+                      style: kStyleVeryBig.copyWith(color: kColorSecondary),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 580,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Text(
+                kWelcomeText1,
+                style: kStyleSmall.copyWith(color: kColorTert),
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(top: 60, bottom: 20),
+            child: TitleScrollController(
+                icon: about, title: "About Me", width: 100),
+          ),
+          SizedBox(
+            width: 700,
             child: RichText(
               text: TextSpan(
-                text: 'Hi from ',
+                text: kAboutQuote.substring(0, 10),
                 style: kStyleVeryBig,
                 children: [
                   TextSpan(
-                    text: 'Javidh,',
+                    text: kAboutQuote.substring(10, 20),
                     style: kStyleVeryBig.copyWith(color: kColorSecondary),
                   ),
                   TextSpan(
-                    text: ' \nWelcome to My ',
+                    text: kAboutQuote.substring(20, 31),
                     style: kStyleVeryBig,
                   ),
                   TextSpan(
-                    text: 'Tech Odyssey!',
+                    text: kAboutQuote.substring(31),
                     style: kStyleVeryBig.copyWith(color: kColorSecondary),
                   ),
                 ],
               ),
             ),
           ),
-        ),
-        SizedBox(
-          width: 580,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-            child: Text(
-              kWelcomeText1,
-              style: kStyleSmall.copyWith(color: kColorTert),
-            ),
-          ),
-        )
-      ],
+          SizedBox()
+        ],
+      ),
     );
   }
 }

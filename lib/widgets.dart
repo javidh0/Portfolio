@@ -135,19 +135,22 @@ class TitleScrollController extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HoverWidget(
-      hoverChild: ContainerOfTitleScrollController(
-        highlightColor: kColorSecondary,
-        icon: icon,
-        title: title,
-        width: width,
-      ),
-      onHover: (event) {},
-      child: ContainerOfTitleScrollController(
-        highlightColor: kColorTert,
-        icon: icon,
-        title: title,
-        width: width,
+    return Container(
+      alignment: Alignment.topLeft,
+      child: HoverWidget(
+        hoverChild: ContainerOfTitleScrollController(
+          highlightColor: kColorSecondary,
+          icon: icon,
+          title: title,
+          width: width,
+        ),
+        onHover: (event) {},
+        child: ContainerOfTitleScrollController(
+          highlightColor: kColorTert,
+          icon: icon,
+          title: title,
+          width: width,
+        ),
       ),
     );
   }

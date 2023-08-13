@@ -12,7 +12,7 @@ const Color kColorTert = Color(0xFF949395);
 const Color kTransperent = Colors.transparent;
 
 final TextStyle kStyleVeryBig = kFont.copyWith(
-    color: kColorPrimary, fontSize: 50, fontWeight: FontWeight.bold);
+    color: kColorPrimary, fontSize: 40, fontWeight: FontWeight.bold);
 final TextStyle kStyleBig = kFont.copyWith(
     color: kColorPrimary, fontSize: 25, fontWeight: FontWeight.bold);
 final TextStyle kStyleSmall =
@@ -28,8 +28,10 @@ const IconData leetCode = FontAwesomeIcons.code;
 const IconData instagram = FontAwesomeIcons.instagram;
 const IconData gmail = Icons.mail_outline_outlined;
 const IconData home = Icons.home_outlined;
+const IconData about = Icons.person_outlined;
 
 const String kWelcomeText =
     "I am an ardent B.Tech student, with a fervent passion for the dynamic convergence of AI, Software Development, and Data Analytics.\nMy journey is a testament to my unceasing curiosity and unwavering dedication to technological innovation.";
 const String kWelcomeText1 =
     "Stepping into a realm where bytes shape my dreams, code paints my journey, and innovation becomes second nature. Welcome to the tapestry of my tech odyssey.";
+const String kAboutQuote = "Driven by curiosity,\nFueled by passion.";
