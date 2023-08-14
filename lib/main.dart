@@ -75,87 +75,96 @@ class TheContent extends StatelessWidget {
     return SizedBox(
       width: 800,
       child: ListView(
-        children: [
-          const TitleScrollController(
+        children: const [
+          TitleScrollController(
             icon: home,
             title: "WELCOME",
             width: 100,
           ),
+          SubHeading(
+              n1: 'Hi from ',
+              h1: 'Javidh,',
+              n2: ' \nWelcome to My ',
+              h2: 'Tech Odyssey!'),
+          Paragraph(
+            text: kWelcomeText1,
+          ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
-            child: SizedBox(
-              width: 800,
-              child: RichText(
-                text: TextSpan(
-                  text: 'Hi from ',
-                  style: kStyleVeryBig,
-                  children: [
-                    TextSpan(
-                      text: 'Javidh,',
-                      style: kStyleVeryBig.copyWith(color: kColorSecondary),
-                    ),
-                    TextSpan(
-                      text: ' \nWelcome to My ',
-                      style: kStyleVeryBig,
-                    ),
-                    TextSpan(
-                      text: 'Tech Odyssey!',
-                      style: kStyleVeryBig.copyWith(color: kColorSecondary),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 580,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-              child: Text(
-                kWelcomeText1,
-                style: kStyleSmall.copyWith(color: kColorTert),
-              ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(top: 60, bottom: 20),
+            padding: EdgeInsets.only(top: 60),
             child: TitleScrollController(
                 icon: about, title: "About Me", width: 100),
           ),
-          SizedBox(
-            width: 700,
-            child: RichText(
-              text: TextSpan(
-                text: kAboutQuote.substring(0, 10),
-                style: kStyleVeryBig,
-                children: [
-                  TextSpan(
-                    text: kAboutQuote.substring(10, 20),
-                    style: kStyleVeryBig.copyWith(color: kColorSecondary),
-                  ),
-                  TextSpan(
-                    text: kAboutQuote.substring(20, 31),
-                    style: kStyleVeryBig,
-                  ),
-                  TextSpan(
-                    text: kAboutQuote.substring(31),
-                    style: kStyleVeryBig.copyWith(color: kColorSecondary),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 580,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-              child: Text(
-                kAboutMe,
-                style: kStyleSmall.copyWith(color: kColorTert),
-              ),
-            ),
+          SubHeading(
+              n1: "Driven By ",
+              h1: "Curiosity\n",
+              n2: "Fueled By ",
+              h2: 'Passion.'),
+          Paragraph(
+            text: kAboutMe,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class Paragraph extends StatelessWidget {
+  const Paragraph({super.key, required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 580,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 5),
+        child: Text(
+          text,
+          style: kStyleSmall.copyWith(color: kColorTert),
+        ),
+      ),
+    );
+  }
+}
+
+class SubHeading extends StatelessWidget {
+  const SubHeading(
+      {super.key,
+      required this.n1,
+      required this.h1,
+      required this.n2,
+      required this.h2});
+
+  final String n1, h1, n2, h2;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      // padding: EdgeInsets.zero,
+      padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
+      child: SizedBox(
+        width: 800,
+        child: RichText(
+          text: TextSpan(
+            text: n1,
+            style: kStyleVeryBig,
+            children: [
+              TextSpan(
+                text: h1,
+                style: kStyleVeryBig.copyWith(color: kColorSecondary),
+              ),
+              TextSpan(
+                text: n2,
+                style: kStyleVeryBig,
+              ),
+              TextSpan(
+                text: h2,
+                style: kStyleVeryBig.copyWith(color: kColorSecondary),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
