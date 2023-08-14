@@ -46,7 +46,12 @@ class MyPlaceholder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const SkillWidget(
+        heading: "Flutter Connoisseur",
+        paragraph:
+            "Mastered crafting mesmerizing mobile apps with Flutter, orchestrating an immersive user journey.",
+        icon: skills,
+        count: "20");
   }
 }
 
@@ -102,7 +107,8 @@ class TheContent extends StatelessWidget {
             padding: EdgeInsets.only(top: 60),
             child:
                 TitleScrollController(icon: skills, title: "Skills", width: 80),
-          )
+          ),
+          MyPlaceholder(),
         ],
       ),
     );

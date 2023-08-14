@@ -190,6 +190,96 @@ class ContainerOfTitleScrollController extends StatelessWidget {
   }
 }
 
+class SkillWidget extends StatelessWidget {
+  const SkillWidget(
+      {super.key,
+      required this.heading,
+      required this.paragraph,
+      required this.icon,
+      required this.count});
+
+  final String heading, paragraph, count;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: HoverWidget(
+        hoverChild: SkillWidgetContainer(
+          color: kColorSecondary,
+          heading: heading,
+          paragraph: paragraph,
+          icon: icon,
+          count: count,
+        ),
+        onHover: (e) {},
+        child: SkillWidgetContainer(
+          color: kColorPrimary,
+          heading: heading,
+          paragraph: paragraph,
+          icon: icon,
+          count: count,
+        ),
+      ),
+    );
+  }
+}
+
+class SkillWidgetContainer extends StatelessWidget {
+  const SkillWidgetContainer({
+    super.key,
+    required this.color,
+    required this.heading,
+    required this.paragraph,
+    required this.icon,
+    required this.count,
+  });
+
+  final Color color;
+  final String heading, paragraph, count;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(width: 0.5, color: color),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      padding: const EdgeInsets.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(heading, style: kStyleMedium.copyWith(color: color)),
+              Icon(icon, size: kStyleMedium.fontSize, color: color)
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: Text(
+              paragraph,
+              style: kStyleVSmall.copyWith(color: kColorTert),
+            ),
+          ),
+          Text(
+            "$count Projects",
+            style: kStyleSmall.copyWith(
+                decorationColor: kColorPrimary,
+                decorationThickness: 2.5,
+                decoration: color == kColorSecondary
+                    ? TextDecoration.underline
+                    : TextDecoration.none),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class SideNavBar extends StatelessWidget {
   const SideNavBar({super.key});
 
