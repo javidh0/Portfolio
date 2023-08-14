@@ -35,3 +35,5 @@ const String kWelcomeText =
 const String kWelcomeText1 =
     "Stepping into a realm where bytes shape my dreams, code paints my journey, and innovation becomes second nature. Welcome to the tapestry of my tech odyssey.";
 const String kAboutQuote = "Driven by curiosity,\nFueled by passion.";
+const String kAboutMe =
+    "As an avid explorer of the tech realm, I seek challenges that propel my growth. My academic voyage at SRM University has enriched me with a profound understanding of AI intricacies, honed my software craftsmanship, and empowered me to decipher the data symphony.";

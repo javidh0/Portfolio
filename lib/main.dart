@@ -75,8 +75,6 @@ class TheContent extends StatelessWidget {
     return SizedBox(
       width: 800,
       child: ListView(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const TitleScrollController(
             icon: home,
@@ -147,7 +145,16 @@ class TheContent extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox()
+          SizedBox(
+            width: 580,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              child: Text(
+                kAboutMe,
+                style: kStyleSmall.copyWith(color: kColorTert),
+              ),
+            ),
+          ),
         ],
       ),
     );
