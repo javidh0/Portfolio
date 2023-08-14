@@ -79,37 +79,43 @@ class TheContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: 800,
-      child: ListView(
-        children: const [
-          TitleScrollController(
-            icon: home,
-            title: "WELCOME",
-            width: 100,
-          ),
-          SubHeading(
-              n1: 'Hi from ',
-              h1: 'Javidh,',
-              n2: ' \nWelcome to My ',
-              h2: 'Tech Odyssey!'),
-          Paragraph(text: kWelcomeText1),
-          Padding(
-            padding: EdgeInsets.only(top: 60),
-            child: TitleScrollController(
-                icon: about, title: "About Me", width: 100),
-          ),
-          SubHeading(
-              n1: "Driven By ",
-              h1: "Curiosity\n",
-              n2: "Fueled By ",
-              h2: 'Passion.'),
-          Paragraph(text: kAboutMe),
-          Padding(
-            padding: EdgeInsets.only(top: 60),
-            child:
-                TitleScrollController(icon: skills, title: "Skills", width: 80),
-          ),
-          MyPlaceholder(),
-        ],
+      child: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: ListView(
+          children: const [
+            TitleScrollController(
+              icon: home,
+              title: "WELCOME",
+              width: 100,
+            ),
+            SubHeading(
+                n1: 'Hi from ',
+                h1: 'Javidh,',
+                n2: ' \nWelcome to My ',
+                h2: 'Tech Odyssey!'),
+            Paragraph(text: kWelcomeText1),
+            Padding(
+              padding: EdgeInsets.only(top: 60),
+              child: TitleScrollController(
+                  icon: about, title: "About Me", width: 100),
+            ),
+            SubHeading(
+                n1: "Driven By ",
+                h1: "Curiosity\n",
+                n2: "Fueled By ",
+                h2: 'Passion.'),
+            Paragraph(text: kAboutMe),
+            Padding(
+              padding: EdgeInsets.only(top: 60),
+              child: TitleScrollController(
+                  icon: skills, title: "Skills", width: 80),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(5, 30, 5, 20),
+              child: MyPlaceholder(),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -174,5 +180,13 @@ class SubHeading extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildOverscrollIndicator(
+      BuildContext context, Widget child, ScrollableDetails details) {
+    return child;
   }
 }
