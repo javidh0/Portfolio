@@ -247,7 +247,7 @@ class SkillWidgetContainer extends StatelessWidget {
         border: Border.all(width: 0.5, color: color),
         borderRadius: BorderRadius.circular(10),
       ),
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -259,7 +259,7 @@ class SkillWidgetContainer extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 15),
+            padding: const EdgeInsets.only(bottom: 35),
             child: Text(
               paragraph,
               style: kStyleVSmall.copyWith(color: kColorTert),
