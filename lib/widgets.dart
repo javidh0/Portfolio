@@ -182,7 +182,7 @@ class ContainerOfTitleScrollController extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Icon(home, size: 14, color: highlightColor),
+          Icon(icon, size: 14, color: highlightColor),
           Text(title, style: kStyleVSmall.copyWith(color: highlightColor)),
         ],
       ),

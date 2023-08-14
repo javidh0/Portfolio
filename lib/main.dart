@@ -86,9 +86,7 @@ class TheContent extends StatelessWidget {
               h1: 'Javidh,',
               n2: ' \nWelcome to My ',
               h2: 'Tech Odyssey!'),
-          Paragraph(
-            text: kWelcomeText1,
-          ),
+          Paragraph(text: kWelcomeText1),
           Padding(
             padding: EdgeInsets.only(top: 60),
             child: TitleScrollController(
@@ -99,9 +97,12 @@ class TheContent extends StatelessWidget {
               h1: "Curiosity\n",
               n2: "Fueled By ",
               h2: 'Passion.'),
-          Paragraph(
-            text: kAboutMe,
-          ),
+          Paragraph(text: kAboutMe),
+          Padding(
+            padding: EdgeInsets.only(top: 60),
+            child:
+                TitleScrollController(icon: skills, title: "Skills", width: 80),
+          )
         ],
       ),
     );
