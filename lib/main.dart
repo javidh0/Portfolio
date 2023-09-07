@@ -51,7 +51,7 @@ class MyPlaceholder extends StatelessWidget {
         paragraph:
             "Mastered crafting mesmerizing mobile apps with Flutter, orchestrating an immersive user journey.",
         icon: skills,
-        count: "20");
+        count: "2");
   }
 }
 
@@ -110,10 +110,33 @@ class TheContent extends StatelessWidget {
               child: TitleScrollController(
                   icon: skills, title: "Skills", width: 80),
             ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(5, 30, 5, 20),
-              child: MyPlaceholder(),
+            SkillWidget(
+              heading: "Flutter/Dart",
+              paragraph:
+                  "Mastered crafting mesmerizing mobile apps with Flutter, orchestrating an immersive user journey.",
+              icon: skills,
+              count: "2",
             ),
+            SkillWidget(
+              heading: "AI & ML",
+              paragraph:
+                  "Proficient in Machine Learning, specializing in Python-based model development and practical problem-solving.",
+              icon: skills,
+              count: "2",
+            ),
+            SkillWidget(
+              heading: "Data Analytics",
+              paragraph:
+                  "Data enthusiast skilled in leveraging Python for data analysis, visualization, and insights extraction. Proficient in data manipulation, statistical analysis, and creating impactful visualizations to drive informed decision-making",
+              icon: skills,
+              count: "2",
+            ),
+            SkillWidget(
+                heading: "Full Stack",
+                paragraph:
+                    "Experienced full-stack developer adept at creating end-to-end web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. Strong focus on delivering seamless user experiences, scalable backends, and responsive frontends",
+                icon: skills,
+                count: "3")
           ],
         ),
       ),
