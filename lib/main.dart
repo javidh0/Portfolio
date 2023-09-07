@@ -121,68 +121,6 @@ class TheContent extends StatelessWidget {
   }
 }
 
-class Paragraph extends StatelessWidget {
-  const Paragraph({super.key, required this.text});
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 580,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 5),
-        child: Text(
-          text,
-          style: kStyleSmall.copyWith(color: kColorTert),
-        ),
-      ),
-    );
-  }
-}
-
-class SubHeading extends StatelessWidget {
-  const SubHeading(
-      {super.key,
-      required this.n1,
-      required this.h1,
-      required this.n2,
-      required this.h2});
-
-  final String n1, h1, n2, h2;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      // padding: EdgeInsets.zero,
-      padding: const EdgeInsets.fromLTRB(5, 30, 5, 20),
-      child: SizedBox(
-        width: 800,
-        child: RichText(
-          text: TextSpan(
-            text: n1,
-            style: kStyleVeryBig,
-            children: [
-              TextSpan(
-                text: h1,
-                style: kStyleVeryBig.copyWith(color: kColorSecondary),
-              ),
-              TextSpan(
-                text: n2,
-                style: kStyleVeryBig,
-              ),
-              TextSpan(
-                text: h2,
-                style: kStyleVeryBig.copyWith(color: kColorSecondary),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class MyBehavior extends ScrollBehavior {
   @override
   Widget buildOverscrollIndicator(

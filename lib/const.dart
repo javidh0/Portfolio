@@ -47,7 +47,6 @@ const Widget kSkillFlutterDart = SkillWidget(
   icon: skills,
   count: "2",
 );
-
 const Widget kSkillAiMl = SkillWidget(
   heading: "AI & ML",
   paragraph:
@@ -55,7 +54,6 @@ const Widget kSkillAiMl = SkillWidget(
   icon: skills,
   count: "2",
 );
-
 const Widget kSkillDataAnalytics = SkillWidget(
   heading: "Data Analytics",
   paragraph:
@@ -63,7 +61,6 @@ const Widget kSkillDataAnalytics = SkillWidget(
   icon: skills,
   count: "2",
 );
-
 const Widget kSkillFSD = SkillWidget(
     heading: "Full Stack",
     paragraph:
