@@ -203,23 +203,26 @@ class SkillWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {},
-      child: HoverWidget(
-        hoverChild: SkillWidgetContainer(
-          color: kColorSecondary,
-          heading: heading,
-          paragraph: paragraph,
-          icon: icon,
-          count: count,
-        ),
-        onHover: (e) {},
-        child: SkillWidgetContainer(
-          color: kColorPrimary,
-          heading: heading,
-          paragraph: paragraph,
-          icon: icon,
-          count: count,
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(5, 30, 5, 0),
+      child: GestureDetector(
+        onTap: () {},
+        child: HoverWidget(
+          hoverChild: SkillWidgetContainer(
+            color: kColorSecondary,
+            heading: heading,
+            paragraph: paragraph,
+            icon: icon,
+            count: count,
+          ),
+          onHover: (e) {},
+          child: SkillWidgetContainer(
+            color: kColorPrimary,
+            heading: heading,
+            paragraph: paragraph,
+            icon: icon,
+            count: count,
+          ),
         ),
       ),
     );
