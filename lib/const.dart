@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'widgets.dart';
 
 final TextStyle kFont = GoogleFonts.poppins();
 const Color kBackgroundColor = Color(0xFF1D1B1D);
@@ -38,3 +39,34 @@ const String kWelcomeText1 =
 const String kAboutQuote = "Driven by curiosity,\nFueled by passion.";
 const String kAboutMe =
     "Hello there! I'm Mohammed Javidh, a B.Tech student at SRM University - KTR, Chennai, with a genuine curiosity for technology. My world revolves around AI, Software Development, and Data Analytics, where I find endless opportunities to learn and innovate.";
+
+const Widget kSkillFlutterDart = SkillWidget(
+  heading: "Flutter/Dart",
+  paragraph:
+      "Mastered crafting mesmerizing mobile apps with Flutter, orchestrating an immersive user journey.",
+  icon: skills,
+  count: "2",
+);
+
+const Widget kSkillAiMl = SkillWidget(
+  heading: "AI & ML",
+  paragraph:
+      "Proficient in Machine Learning, specializing in Python-based model development and practical problem-solving.",
+  icon: skills,
+  count: "2",
+);
+
+const Widget kSkillDataAnalytics = SkillWidget(
+  heading: "Data Analytics",
+  paragraph:
+      "Data enthusiast skilled in leveraging Python for data analysis, visualization, and insights extraction. Proficient in data manipulation, statistical analysis, and creating impactful visualizations to drive informed decision-making",
+  icon: skills,
+  count: "2",
+);
+
+const Widget kSkillFSD = SkillWidget(
+    heading: "Full Stack",
+    paragraph:
+        "Experienced full-stack developer adept at creating end-to-end web applications using the MERN (MongoDB, Express.js, React, Node.js) stack. Strong focus on delivering seamless user experiences, scalable backends, and responsive frontends",
+    icon: skills,
+    count: "3");
