@@ -31,6 +31,7 @@ const IconData gmail = Icons.mail_outline_outlined;
 const IconData home = Icons.home_outlined;
 const IconData about = Icons.person_outlined;
 const IconData skills = Icons.memory_outlined;
+const IconData journey = Icons.map_outlined;
 
 const String kWelcomeText =
     "I am an ardent B.Tech student, with a fervent passion for the dynamic convergence of AI, Software Development, and Data Analytics.\nMy journey is a testament to my unceasing curiosity and unwavering dedication to technological innovation.";
