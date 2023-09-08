@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/widgets.dart';
 import 'const.dart';
@@ -83,6 +85,7 @@ class TheContent extends StatelessWidget {
         behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
         child: ListView(
           children: const [
+            ExperienceWidget(),
             TitleScrollController(
               icon: home,
               title: "WELCOME",
@@ -114,8 +117,67 @@ class TheContent extends StatelessWidget {
             kSkillAiMl,
             kSkillDataAnalytics,
             kSkillFSD,
+            Padding(
+              padding: EdgeInsets.only(top: 60),
+              child: TitleScrollController(
+                  icon: journey, title: "My Journey", width: 100),
+            ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ExperienceWidget extends StatelessWidget {
+  const ExperienceWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: EdgeInsets.zero,
+                height: 250,
+                alignment: Alignment.topLeft,
+                color: Colors.transparent,
+                child: VerticalDivider(
+                  width: 15,
+                  thickness: 5,
+                  color: kColorPrimary,
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.zero,
+                width: 15,
+                height: 18,
+                decoration: BoxDecoration(
+                  color: kColorSecondary,
+                  shape: BoxShape.circle,
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.zero,
+                height: 250,
+                alignment: Alignment.topLeft,
+                color: Colors.transparent,
+                child: VerticalDivider(
+                  width: 15,
+                  thickness: 5,
+                  color: kColorPrimary,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
